@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+    "extends": "next/core-web-vitals",
+    "rules": {
+        "semi": ["error", "never"],
+        "@typescript-eslint/explicit-function-return-type": "warn",
+        "max-len": ["warn", { "code": 110 }],
+        "indent": ["error", 4, { "SwitchCase": 1 }]
+    }
 }
