@@ -53,6 +53,6 @@ export type CreateAppointmentParams = {
 export type UpdateAppointmentParams = {
   appointmentId: string;
   userId: string;
-  appointment: Appointment;
+  appointment: Partial<Appointment>;
   type: string;
 };

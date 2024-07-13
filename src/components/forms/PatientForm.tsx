@@ -10,7 +10,7 @@ import SubmitButton from "../SubmitButton";
 import { useState } from "react";
 import { UserFormValidation } from "@/lib/valiation";
 import { useRouter } from "next/navigation";
-import { createUser } from "@/lib/actions/patient/createUser";
+import { createUser } from "@/lib/actions/user/createUser";
 
 export enum FormFieldType {
   INPUT = "input",

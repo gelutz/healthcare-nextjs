@@ -95,7 +95,7 @@ const RenderField = ({
       return (
         <div className="flex rounded-md border border-dark-500 bg-dark-400">
           <Image
-            className="ml-2"
+            className="ml-2 h-auto"
             src="/assets/icons/calendar.svg"
             alt="calendar"
             height={24}
@@ -134,6 +134,9 @@ const RenderField = ({
       return (
         <FormControl>
           <Textarea
+            onSubmit={(e) => {
+              console.log(e.target);
+            }}
             {...field}
             placeholder={placeholder}
             disabled={props.disabled}

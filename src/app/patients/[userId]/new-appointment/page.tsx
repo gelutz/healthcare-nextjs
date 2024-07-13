@@ -1,23 +1,33 @@
 import RegisterForm from "@/components/forms/RegisterForm";
-import { getUser } from "@/lib/actions/patient/getUser";
+import { getUser } from "@/lib/actions/user/getUser";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SearchParamProps } from "../../../../../types";
+import AppointmentForm from "@/components/forms/AppointmentForm";
+import { getPatient } from "@/lib/actions/patient/getPatient";
 
 const NewAppointment = async ({ params: { userId } }: SearchParamProps) => {
-  const user = await getUser(userId);
+  const patient = await getPatient(userId);
 
   return (
     <div className="flex h-screen max-h-screen">
       <section className="remove-scrollbar container my-auto">
-        <div className="sub-container max-w-[860px] flex-1 flex-col py-10">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            height={1000}
-            width={1000}
-            alt="patient"
-            className="mb-12 h-10 w-full"
+        <div className="sub-container max-w-[860px] flex-1 justify-between">
+          <div className="flex items-start">
+            <Image
+              src="/assets/icons/logo-full.svg"
+              height={100}
+              width={200}
+              alt="patient"
+              className="mb-12 w-auto"
+            />
+          </div>
+
+          <AppointmentForm
+            type="create"
+            userId={userId}
+            patientId={patient.$id}
           />
 
           <p className="copyright py-12">

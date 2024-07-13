@@ -10,9 +10,9 @@ import SubmitButton from "../SubmitButton";
 import { useState } from "react";
 import { PatientFormValidation, UserFormValidation } from "@/lib/valiation";
 import { useRouter } from "next/navigation";
-import { getUser } from "@/lib/actions/patient/getUser";
+import { getUser } from "@/lib/actions/user/getUser";
 import { FormFieldType } from "./PatientForm";
-import { createUser } from "@/lib/actions/patient/createUser";
+import { createUser } from "@/lib/actions/user/createUser";
 import { RadioGroup } from "@radix-ui/react-radio-group";
 import {
   Doctors,
@@ -133,6 +133,7 @@ export const RegisterForm = ({ user }: { user: User }) => {
             name="birthDate"
             label="Date of Birth"
             placeholder="Enter your date of birth"
+            dateFormat="dd/MM/yyyy"
           />
 
           <CustomFormField
