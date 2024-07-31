@@ -1,8 +1,8 @@
-import React from "react";
-import { Status } from "../../types";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { StatusIcon } from "../../constants";
+import React from "react";
+import { Status } from "../types";
+import { StatusIcon } from "../constants";
+import { cn } from "@/lib/utils";
 
 const StatusBadge = ({ status }: { status: Status }) => {
   return (

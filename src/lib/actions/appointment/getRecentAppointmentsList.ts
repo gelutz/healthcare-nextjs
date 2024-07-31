@@ -5,9 +5,10 @@ import {
   DATABASE_ID,
   databases,
 } from "@/lib/appwrite.config";
+
 import { Query } from "node-appwrite";
-import { parseStringify } from "../../../../lib/utils";
-import { Appointment } from "../../../../types/appwrite.types";
+import { Appointment } from "../../../types/appwrite.types";
+import { parseStringify } from "../../utils";
 
 type RecentAppointmentsList = {
   scheduled: number;

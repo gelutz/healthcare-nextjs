@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -9,10 +8,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import React, { useState } from "react";
+
+import { Appointment } from "../types/appwrite.types";
+import AppointmentForm from "./forms/AppointmentForm";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import AppointmentForm from "./forms/AppointmentForm";
-import { Appointment } from "../../types/appwrite.types";
 
 type AppointmentModalProps = {
   type: "schedule" | "cancel";

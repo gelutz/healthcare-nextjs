@@ -3,16 +3,17 @@
 import {
   BUCKET_ID,
   DATABASE_ID,
-  databases,
   ENDPOINT,
   PATIENT_COLLECTION_ID,
   PROJECT_ID,
+  databases,
   storage,
 } from "@/lib/appwrite.config";
+
 import { ID } from "node-appwrite";
 import { InputFile } from "node-appwrite/file";
-import { parseStringify } from "../../../../lib/utils";
-import { RegisterUserParams } from "../../../../types";
+import { RegisterUserParams } from "../../../types";
+import { parseStringify } from "../../utils";
 
 export const registerPatient = async ({
   identificationDocument,

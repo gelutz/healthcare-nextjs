@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import { ThemeProvider } from "@/components/Theme-provider";
 
 const fontSans = Plus_Jakarta_Sans({
@@ -23,6 +23,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const a = cn("layout", "layout", {})
+    // ^?
   return (
     <html lang="en">
       <body

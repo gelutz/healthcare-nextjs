@@ -20,7 +20,7 @@ import {
 
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { decryptKey, encryptKey } from "../../lib/utils";
+import { decryptKey, encryptKey } from "../lib/utils";
 
 const getPasskey = () => {
   if (typeof window !== "undefined") {

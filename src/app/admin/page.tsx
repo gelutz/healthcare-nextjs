@@ -1,11 +1,11 @@
+import { Appointment } from "../../types/appwrite.types";
 import { DataTable } from "@/components/table/DataTable";
-import StatCard from "@/components/StatCard";
-import { columns } from "@/components/table/Columns";
-import { getRecentAppointmentsList } from "@/lib/actions/appointment/getRecentAppointmentsList";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Appointment } from "../../../types/appwrite.types";
+import StatCard from "@/components/StatCard";
+import { columns } from "@/components/table/Columns";
+import { getRecentAppointmentsList } from "@/lib/actions/appointment/getRecentAppointmentsList";
 
 const AdminPage = async () => {
   const appointments = await getRecentAppointmentsList();

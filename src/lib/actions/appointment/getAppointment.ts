@@ -1,11 +1,11 @@
 "use server";
 
 import {
-  APPOINTMENT_COLLECTION_ID,
-  DATABASE_ID,
-  databases,
+    APPOINTMENT_COLLECTION_ID,
+    DATABASE_ID,
+    databases,
 } from "@/lib/appwrite.config";
-import { parseStringify } from "../../../../lib/utils";
+import { parseStringify } from "../../utils";
 
 export const getAppointment = async (appointmentId: string) => {
   try {

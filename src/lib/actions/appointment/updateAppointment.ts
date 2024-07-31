@@ -5,9 +5,10 @@ import {
   DATABASE_ID,
   databases,
 } from "@/lib/appwrite.config";
+
 import { revalidatePath } from "next/cache";
-import { parseStringify } from "../../../../lib/utils";
-import { UpdateAppointmentParams } from "../../../../types";
+import { UpdateAppointmentParams } from "../../../types";
+import { parseStringify } from "../../utils";
 
 export const updateAppointment = async ({
   userId,

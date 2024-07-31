@@ -1,7 +1,7 @@
 "use server";
 
-import { parseStringify } from "../../../../lib/utils";
 import { users } from "../../appwrite.config";
+import { parseStringify } from "../../utils";
 
 export const getUser = async (userId: string) => {
   try {

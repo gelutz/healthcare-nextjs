@@ -1,9 +1,9 @@
-import RegisterForm from "@/components/forms/RegisterForm";
-import { getUser } from "@/lib/actions/user/getUser";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { SearchParamProps } from "../../../../../types";
+import RegisterForm from "@/components/forms/RegisterForm";
+import { SearchParamProps } from "../../../../types";
+import { getUser } from "@/lib/actions/user/getUser";
 
 const Register = async ({ params: { userId } }: SearchParamProps) => {
   const user = await getUser(userId);

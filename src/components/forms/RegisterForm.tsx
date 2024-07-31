@@ -1,32 +1,32 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
-import CustomFormField from "../CustomFormField";
-import { Form, FormControl } from "../ui/form";
-import SubmitButton from "../SubmitButton";
-import { useState } from "react";
-import { PatientFormValidation, UserFormValidation } from "@/lib/valiation";
-import { useRouter } from "next/navigation";
-import { getUser } from "@/lib/actions/user/getUser";
-import { FormFieldType } from "./PatientForm";
-import { createUser } from "@/lib/actions/user/createUser";
-import { RadioGroup } from "@radix-ui/react-radio-group";
 import {
   Doctors,
   GenderOptions,
   IdentificationTypes,
   PatientFormDefaultValues,
-} from "../../../constants";
-import { RadioGroupItem } from "../ui/radio-group";
-import { Label } from "../ui/label";
-import Image from "next/image";
-import { SelectItem } from "../ui/select";
+} from "../../constants";
+import { Form, FormControl } from "../ui/form";
+import { PatientFormValidation, UserFormValidation } from "@/lib/valiation";
+
+import CustomFormField from "../CustomFormField";
 import FileUploader from "../FileUploader";
+import { FormFieldType } from "./PatientForm";
+import Image from "next/image";
+import { Label } from "../ui/label";
+import { RadioGroup } from "@radix-ui/react-radio-group";
+import { RadioGroupItem } from "../ui/radio-group";
+import { SelectItem } from "../ui/select";
+import SubmitButton from "../SubmitButton";
+import { User } from "../../types";
+import { createUser } from "@/lib/actions/user/createUser";
+import { getUser } from "@/lib/actions/user/getUser";
 import { registerPatient } from "@/lib/actions/patient/registerPatient";
-import { User } from "../../../types";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const formSchema = PatientFormValidation;
 

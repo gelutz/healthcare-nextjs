@@ -1,22 +1,23 @@
 "use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 
-import CustomFormField from "../CustomFormField";
-import { Form } from "../ui/form";
-import SubmitButton from "../SubmitButton";
 import { Dispatch, SetStateAction, useState } from "react";
-import { useRouter } from "next/navigation";
+import { Status, UpdateAppointmentParams } from "../../types";
+
+import { Appointment } from "../../types/appwrite.types";
+import CustomFormField from "../CustomFormField";
+import { Doctors } from "../../constants";
+import { Form } from "../ui/form";
 import { FormFieldType } from "./PatientForm";
-import { getAppointmentSchema } from "@/lib/valiation";
-import { Doctors } from "../../../constants";
-import { SelectItem } from "../ui/select";
 import Image from "next/image";
+import { SelectItem } from "../ui/select";
+import SubmitButton from "../SubmitButton";
 import { createAppointment } from "@/lib/actions/appointment/createAppointment";
-import { Status, UpdateAppointmentParams } from "../../../types";
-import { Appointment } from "../../../types/appwrite.types";
+import { getAppointmentSchema } from "@/lib/valiation";
 import { updateAppointment } from "@/lib/actions/appointment/updateAppointment";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 type AppointmentFormProps = {
   userId: string;

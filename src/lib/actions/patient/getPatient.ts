@@ -1,12 +1,12 @@
 "use server";
 
 import {
-  DATABASE_ID,
-  databases,
-  PATIENT_COLLECTION_ID,
+    DATABASE_ID,
+    databases,
+    PATIENT_COLLECTION_ID,
 } from "@/lib/appwrite.config";
 import { Query } from "node-appwrite";
-import { parseStringify } from "../../../../lib/utils";
+import { parseStringify } from "../../utils";
 
 export const getPatient = async (userId: string) => {
   try {

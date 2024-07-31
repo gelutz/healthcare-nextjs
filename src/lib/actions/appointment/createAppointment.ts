@@ -5,9 +5,10 @@ import {
   DATABASE_ID,
   databases,
 } from "@/lib/appwrite.config";
+
 import { ID } from "node-appwrite";
-import { parseStringify } from "../../../../lib/utils";
-import { CreateAppointmentParams } from "../../../../types";
+import { CreateAppointmentParams } from "../../../types";
+import { parseStringify } from "../../utils";
 
 export const createAppointment = async (data: CreateAppointmentParams) => {
   try {

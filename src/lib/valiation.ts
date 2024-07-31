@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { GenderOptions } from "../../constants";
+import { GenderOptions } from "../constants";
 
 export const UserFormValidation = z.object({
   name: z

@@ -1,8 +1,10 @@
 "use server";
+
 import { ID, Query } from "node-appwrite";
-import { parseStringify } from "../../../../lib/utils";
-import { CreateUserParams } from "../../../../types";
+
+import { CreateUserParams } from "../../../types";
 import { users } from "../../appwrite.config";
+import { parseStringify } from "../../utils";
 
 export const createUser = async (user: CreateUserParams) => {
   try {

@@ -8,15 +8,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ColumnDef } from "@tanstack/react-table";
-import { Appointment } from "../../../types/appwrite.types";
-import { Button } from "../ui/button";
-import { MoreHorizontal } from "lucide-react";
-import { formatDateTime } from "../../../lib/utils";
-import StatusBadge from "../StatusBadge";
-import { Doctors } from "../../../constants";
-import Image from "next/image";
+
+import { Appointment } from "../../types/appwrite.types";
 import AppointmentModal from "../AppointmentModal";
+import { Button } from "../ui/button";
+import { ColumnDef } from "@tanstack/react-table";
+import { Doctors } from "../../constants";
+import Image from "next/image";
+import { MoreHorizontal } from "lucide-react";
+import StatusBadge from "../StatusBadge";
+import { formatDateTime } from "../../lib/utils";
 
 export const columns: ColumnDef<Appointment>[] = [
   {

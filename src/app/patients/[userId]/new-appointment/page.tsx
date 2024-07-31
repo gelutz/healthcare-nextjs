@@ -1,11 +1,11 @@
-import RegisterForm from "@/components/forms/RegisterForm";
-import { getUser } from "@/lib/actions/user/getUser";
+import AppointmentForm from "@/components/forms/AppointmentForm";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { SearchParamProps } from "../../../../../types";
-import AppointmentForm from "@/components/forms/AppointmentForm";
+import RegisterForm from "@/components/forms/RegisterForm";
+import { SearchParamProps } from "../../../../types";
 import { getPatient } from "@/lib/actions/patient/getPatient";
+import { getUser } from "@/lib/actions/user/getUser";
 
 const NewAppointment = async ({ params: { userId } }: SearchParamProps) => {
   const patient = await getPatient(userId);
